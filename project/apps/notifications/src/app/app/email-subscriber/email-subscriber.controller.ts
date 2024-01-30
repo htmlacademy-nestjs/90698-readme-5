@@ -14,7 +14,7 @@ export class EmailSubscriberController {
   ) {}
 
   @RabbitSubscribe({
-    exchange: 'readme.notifyications.income',
+    exchange: 'readme.notifications.income',
     routingKey: RabbitRouting.AddSubscriber,
     queue: 'readme.notifications.income',
   })

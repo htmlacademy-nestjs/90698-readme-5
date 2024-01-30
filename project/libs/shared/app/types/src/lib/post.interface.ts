@@ -11,6 +11,8 @@ export const PostType = {
 
 export type PostType = typeof PostType[keyof typeof PostType];
 
+export type Post = TextPost | VideoPost | QuotePost | PhotoPost | LinkPost;
+
 export interface BasePost {
   id?: string;
   isDraft?: boolean;

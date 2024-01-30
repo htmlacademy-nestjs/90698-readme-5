@@ -67,4 +67,16 @@ export class BlogTagRepository extends BasePostgresRepository<BlogTagEntity, Tag
 
     return this.createEntityFromDocument(updatedTag);
   }
+
+  public async findByIds(ids: string[]): Promise<BlogTagEntity[]> {
+    const records = await this.client.tag.findMany({
+      where: {
+        id: {
+          in: ids,
+        }
+      }
+    });
+
+    return records.map((record) => this.createEntityFromDocument(record));
+  }
 }

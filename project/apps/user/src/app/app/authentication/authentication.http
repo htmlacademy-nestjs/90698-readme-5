@@ -3,8 +3,8 @@ POST http://localhost:4000/api/authentication/register HTTP/1.1
 Content-Type: application/json
 
 {
-  "email": "user4@notfound.local",
-  "firstname": "Keks",
+  "email": "usett@notfound.local",
+  "firstname": "Keksw",
   "password": "123456"
 }
 
@@ -12,6 +12,7 @@ Content-Type: application/json
 
 # Get user by ID
 GET http://localhost:4000/api/authentication/7aef6925-4fe5-4057-b5cc-cc7cf214df05 HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InVzZXJAbm90Zm91bmQubG9jYWwiLCJyb2xlIjoidXNlciIsImZpcnN0bmFtZSI6Iktla3MiLCJpYXQiOjE3MDY1OTE5NDUsImV4cCI6MTcwNjc2NDc0NX0.JGndzhCNVQPiGwLQfSQwQ2DUiMP3g6h55UHA034vQpE
 
 ###
 
